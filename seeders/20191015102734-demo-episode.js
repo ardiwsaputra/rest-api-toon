@@ -3,7 +3,7 @@
 module.exports = {
   up: (queryInterface, Sequelize) => {
     return queryInterface.bulkInsert(
-      'Episodes',
+      'episodes',
       [
         {
           title: 'Ep.1 Naruto Kembali',
