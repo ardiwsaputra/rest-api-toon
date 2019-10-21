@@ -6,7 +6,7 @@ const Op = Sequelize.Op;
 exports.index = (req, res) => {
   let favorite = req.query.is_favorite;
   let title = req.query.title;
-  if (favorite === 'true') {
+  if (favorite == 'true') {
     favorite = 1;
     Webtoon.findAll({
       where: {
