@@ -13,6 +13,7 @@ exports.login = (req, res) => {
       res.send({
         success: true,
         message: 'User logged in successfully',
+        id: user.id,
         email,
         token,
       });
