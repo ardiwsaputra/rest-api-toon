@@ -16,6 +16,8 @@ const UsersController = require('./controllers/users');
 const WebtoonsController = require('./controllers/webtoons');
 const EpisodesController = require('./controllers/episodes');
 const EpisodeImagesController = require('./controllers/episodeImages');
+const FavouritesController = require('./controllers/favourites');
+
 
 //middlewares
 const { authenticated } = require('./middleware');
@@ -98,6 +100,13 @@ app.group('/api/v1', router => {
     authenticated,
     EpisodeImagesController.deleteEpisodeImage,
   ); //28
+
+  //API Favourites
+  router.get(
+    '/user/:id/favourites',
+    FavouritesController.index,
+  );
+
 });
 
 app.listen(process.env.PORT||9876, function(){ console.log(`Listening on our port!`)});

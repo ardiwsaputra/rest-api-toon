@@ -5,7 +5,6 @@ module.exports = (sequelize, DataTypes) => {
     {
       title: DataTypes.STRING,
       genre: DataTypes.STRING,
-      isFavorite: DataTypes.BOOLEAN,
       image: DataTypes.STRING,
       createdBy: DataTypes.INTEGER,
     },

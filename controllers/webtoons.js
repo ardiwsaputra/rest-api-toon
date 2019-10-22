@@ -1,19 +1,12 @@
 const models = require('../models');
 const Sequelize = require('sequelize');
 const Webtoon = models.webtoons;
+const Favourite = models.favourites;
 const Op = Sequelize.Op;
 
 exports.index = (req, res) => {
-  let favorite = req.query.is_favorite;
   let title = req.query.title;
-  if (favorite == 'true') {
-    favorite = true;
-    Webtoon.findAll({
-      where: {
-        isFavorite: favorite,
-      },
-    }).then(webtoons => res.send(webtoons));
-  } else if (title != null) {
+  if (title != null) {
     Webtoon.findAll({
       where: {
         title: { [Op.like]: title + '%' },
@@ -24,6 +17,19 @@ exports.index = (req, res) => {
 };
 
 exports.showWebtoon = (req, res) => {
+  let userId = req.params.id;
+  let favorite = req.query.is_favorite;
+  if (favorite == 'true') {
+    Favourite.findAll({
+      where: {
+        userId: userId
+      },
+      include: [{
+        model: Webtoon,
+        as: 'WebtoonData'
+      }]
+    }).then(favourites => res.send(favourites));
+  }
   Webtoon.findAll({
     where: {
       createdBy: req.params.id,
