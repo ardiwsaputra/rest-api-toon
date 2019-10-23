@@ -4,6 +4,17 @@ const EpisodeImage = models.episode_images;
 exports.index = (req, res) => {
   const webtoonId = req.params.webtoonId;
   const episodeId = req.params.episodeId;
+  EpisodeImage.findAll({
+    where: {
+      webtoonId: webtoonId,
+      episodeId: episodeId,
+    },
+  }).then(result => res.send(result));
+};
+
+exports.indexUser = (req, res) => {
+  const webtoonId = req.params.webtoonId;
+  const episodeId = req.params.episodeId;
   const createdBy = req.params.userId;
   EpisodeImage.findAll({
     where: {

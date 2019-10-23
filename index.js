@@ -88,7 +88,7 @@ app.group('/api/v1', router => {
   router.get(
     '/user/:userId/webtoon/:webtoonId/episode/:episodeId/images',
     authenticated,
-    EpisodeImagesController.index,
+    EpisodeImagesController.indexUser,
   ); //25
   router.post(
     '/user/:userId/webtoon/:webtoonId/episode/:episodeId/image',
