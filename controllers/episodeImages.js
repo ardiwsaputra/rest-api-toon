@@ -9,9 +9,6 @@ exports.index = (req, res) => {
       webtoonId: webtoonId,
       episodeId: episodeId,
     },
-    order: [
-      ['id', 'DESC'],
-    ],
   }).then(result => res.send(result));
 };
 
@@ -25,9 +22,6 @@ exports.indexUser = (req, res) => {
       episodeId: episodeId,
       createdBy: createdBy,
     },
-    order: [
-      ['id', 'DESC'],
-    ],
   }).then(result => res.send(result));
 };
 

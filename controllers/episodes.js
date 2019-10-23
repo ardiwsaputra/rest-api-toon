@@ -6,6 +6,9 @@ exports.index = (req, res) => {
     where: {
       webtoonId: req.params.webtoonId,
     },
+    order: [
+      ['id', 'DESC'],
+    ],
   }).then(episodes => res.send(episodes));
 };
 
@@ -15,6 +18,9 @@ exports.showEpisodes = (req, res) => {
       webtoonId: req.params.webtoonId,
       createdBy: req.params.userId,
     },
+    order: [
+      ['id', 'DESC'],
+    ],
   }).then(episodes => res.send(episodes));
 };
 
