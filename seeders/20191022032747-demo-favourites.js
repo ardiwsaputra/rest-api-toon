@@ -7,13 +7,25 @@ module.exports = {
       [
         {
           userId: 1,
-          webtoonId: 2,
+          webtoonId: 3,
+          createdAt: new Date(),
+          updatedAt: new Date(),
+        },
+        {
+          userId: 1,
+          webtoonId: 5,
           createdAt: new Date(),
           updatedAt: new Date(),
         },
         {
           userId: 2,
-          webtoonId: 2,
+          webtoonId: 4,
+          createdAt: new Date(),
+          updatedAt: new Date(),
+        },
+        {
+          userId: 2,
+          webtoonId: 5,
           createdAt: new Date(),
           updatedAt: new Date(),
         },
