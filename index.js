@@ -9,6 +9,10 @@ app.get('/', (req, res) => {
 });
 
 app.use(bodyParser.json());
+app.use('public/uploads', express.static('public/uploads'));
+
+//multer
+const {upload} = require('./upload')
 
 //controllers
 const AuthController = require('./controllers/auth');
@@ -35,17 +39,26 @@ app.group('/api/v1', router => {
   router.delete('/user/:id', authenticated, UsersController.delete);
 
   //API Webtoons
+
+  router.post(
+    '/user/:id/webtoon',
+    authenticated,
+    upload.single('image'),
+    WebtoonsController.storeWebtoon,
+  );
+  // Mutler
+
   router.get('/webtoons', WebtoonsController.index); //15
   router.get(
     '/user/:id/webtoons',
     authenticated,
     WebtoonsController.showWebtoon,
   ); //20
-  router.post(
-    '/user/:id/webtoon',
-    authenticated,
-    WebtoonsController.storeWebtoon,
-  ); //21
+  // router.post(
+  //   '/user/:id/webtoon',
+  //   authenticated,
+  //   WebtoonsController.storeWebtoon,
+  // ); //21
   router.put(
     '/user/:userId/webtoon/:webtoonId',
     authenticated,

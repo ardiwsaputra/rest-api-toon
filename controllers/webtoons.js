@@ -39,11 +39,11 @@ exports.showWebtoon = (req, res) => {
 
 exports.storeWebtoon = (req, res) => {
   const userId = req.params.id;
-  const { title, genre, isFavorite, image } = req.body;
+  const { title, genre } = req.body;
+  const { image } = req.file.path;
   Webtoon.create({
     title: title,
     genre: genre,
-    isFavorite: isFavorite,
     image: image,
     createdBy: userId,
   }).then(data => {

@@ -14,11 +14,8 @@ module.exports = {
       genre: {
         type: Sequelize.STRING,
       },
-      isFavorite: {
-        type: Sequelize.BOOLEAN,
-      },
       image: {
-        type: Sequelize.STRING,
+        type: Sequelize.TEXT,
       },
       createdAt: {
         allowNull: false,

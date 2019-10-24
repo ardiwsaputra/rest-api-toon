@@ -29,6 +29,18 @@ module.exports = {
           createdAt: new Date(),
           updatedAt: new Date(),
         },
+        {
+          userId: 2,
+          webtoonId: 3,
+          createdAt: new Date(),
+          updatedAt: new Date(),
+        },
+        {
+          userId: 2,
+          webtoonId: 1,
+          createdAt: new Date(),
+          updatedAt: new Date(),
+        },
       ],
       {},
     );
