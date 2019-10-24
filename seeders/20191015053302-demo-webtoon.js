@@ -6,31 +6,22 @@ module.exports = {
       'webtoons',
       [
         {
-          title: 'True Beauty',
+          title: 'Dr.Beauty',
           genre: 'Drama',
           image:
-            'https://static.zerochan.net/Kagura.%28Gin.Tama%29.full.477095.jpg',
-          createdAt: '2019-10-10T08:31:21+00:00',
-          updatedAt: '2019-10-10T08:31:21+00:00',
-          createdBy: 1,
+            'https://i0.wp.com/komiku.co/wp-content/uploads/jS.hlPkjWhB.jpg?resize=125,176&quality=80',
+          createdAt: new Date(),
+          updatedAt: new Date(),
+          createdBy: 2,
         },
         {
-          title: 'Ninja Kotori',
+          title: 'Apocalyptic World',
           genre: 'Action',
           image:
-            'https://4.bp.blogspot.com/-aWQk0Y1Cymo/V7W4n7HCVwI/AAAAAAAAAHI/HarZCVTovxk5kMCruGKD4Akg-62gkbNuQCLcB/s1600/Image-Of-Ninja-Hattori.jpg',
-          createdAt: '2019-10-10T08:31:21+00:00',
-          updatedAt: '2019-10-10T08:31:21+00:00',
-          createdBy: 1,
-        },
-        {
-          title: 'A Good Day',
-          genre: 'Drama',
-          image:
-            'https://www.pixelstalk.net/wp-content/uploads/2016/05/Chidori-Sasuke-Wallpaper.jpg',
-          createdAt: '2019-10-10T08:31:21+00:00',
-          updatedAt: '2019-10-10T08:31:21+00:00',
-          createdBy: 1,
+            'https://i0.wp.com/komiku.co/wp-content/uploads/I-Have-a-Mansion-In-The-Post-Apocalyptic-World.jpg?resize=95,150&quality=80',
+          createdAt: new Date(),
+          updatedAt: new Date(),
+          createdBy: 2,
         },
       ],
       {},
